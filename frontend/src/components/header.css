@@ -49,6 +49,7 @@ body {
 
 .header nav ul li {
   margin: 0 15px;
+  position: relative; /* Set relative positioning for the li */
 }
 
 .header nav ul li a {
@@ -57,8 +58,20 @@ body {
   font-size: 15px;
 }
 
+/* Style for the cart count */
+.cart-count {
+  position: absolute; /* Position relative to the li */
+  top: -5px; /* Adjust as needed */
+  right: -10px; /* Adjust as needed */
+  background-color: red; /* Background color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circular shape */
+  padding: 2px 6px; /* Padding */
+  font-size: 12px; /* Font size */
+}
+
 .product-list {
-  padding-top: 100px;
+  padding-top: 100px; /* Ensure content does not overlap with header */
   margin: 0 20px;
   color: #000000;
   font-size: 18px;

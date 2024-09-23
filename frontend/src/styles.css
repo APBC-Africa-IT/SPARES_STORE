@@ -6,20 +6,122 @@ html {
   background-color: #ffffff;
 }
 
+/* For the overall container */
 .layout {
   display: flex;
-  min-height: 100vh; /* Ensure layout covers the full height */
+  padding-left: 320px; /* Side nav width (300px) + left margin (20px) */
+  margin-top: 120px; /* To align with the top padding of the sidebar */
 }
 
+/* Sidebar styling */
 .side-nav {
-  width: 200px; /* Width of the side navigation */
+  width: 300px;
   padding: 10px;
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+  left: 20px;
+  top: 120px;
+  scroll-behavior: smooth;
+  background-color: #f8f8f8; /* Optional background */
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Products grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual product item */
+.product-item {
+  width: 250px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the item within its grid cell */
+}
+
+.product-item img {
+  width: 100px; /* Adjust size based on your needs */
+  height: 100px;
+  object-fit: contain; /* Maintain aspect ratio, adjust to fit container */
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-item p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
   background-color: #c0c0c0;
-  position: fixed; /* Fixed to stay in place */
-  height: 100vh; /* Full height of the viewport */
-  overflow: auto; /* Scroll if content overflows */
-  left: 70px; /* Align to the left */
-  top: 120px; /* Align to the top */
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; /* Adjust as needed */
+  right: -10px; /* Adjust as needed */
+  background-color: red; /* Background color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circular shape */
+  padding: 2px 6px; /* Padding */
+  font-size: 12px; /* Font size */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    width: 100%; /* Full width on mobile */
+    max-width: 250px; /* But not wider than 250px */
+  }
+}
+
+.side-nav > div {
+  padding: 20px;
+  margin: 20px;
 }
 
 .side-nav p {
@@ -49,12 +151,6 @@ html {
   font-size: 14px;
 }
 
-.main-content {
-  margin-left: 200px; /* Width of the side navigation */
-  padding: 20px;
-  flex: 1; /* Take the remaining space */
-}
-
 .search-box {
   margin-bottom: 20px;
 }
@@ -73,4 +169,8 @@ html {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.icon {
+  margin: 0px 10px 0px;
 }

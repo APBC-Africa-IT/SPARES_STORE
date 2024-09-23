@@ -7,7 +7,7 @@ import { FiUser } from "react-icons/fi";
 import { RxCaretDown } from "react-icons/rx";
 import logo from '../assets/logotransparent.png';
 
-const Header = () => {
+const Header = ({ cartCount }) => { // Receive cartCount as a prop
     const handleSearch = (searchTerm) => {
         console.log('Searching for:', searchTerm);
         // Implement search functionality here
@@ -25,9 +25,14 @@ const Header = () => {
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <li><SearchBox onSearch={handleSearch} /></li>
-                    <li><a href="/wishlist"><MdFavoriteBorder className="icon" /> </a></li>
-                    <li><a href="/cart"><IoCartOutline className="icon" /></a></li>
-                    <li><a href="/profile"><FiUser className="icon" /> </a></li>
+                    <li><a href="/wishlist"><MdFavoriteBorder className="icon" /></a></li>
+                    <li>
+                        <a href="/cart">
+                            <IoCartOutline className="icon" />
+                            {cartCount > 0 && <span className="cart-count">{cartCount}</span>} {/* Display cart count */}
+                        </a>
+                    </li>
+                    <li><a href="/profile"><FiUser className="icon" /></a></li>
                 </ul>
             </nav>
         </div>
@@ -35,4 +40,3 @@ const Header = () => {
 }
 
 export default Header;
-
