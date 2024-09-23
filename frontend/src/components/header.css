@@ -1,0 +1,71 @@
+/* Ensure body and html take up full width and prevent overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: inline-block; /* Keeps the logo in line with the navigation items */
+  margin-right: 20px; /* Space between logo and nav items */
+}
+
+.logo {
+  height: 100px; /* Adjust the height as needed */
+  vertical-align: middle; /* Aligns logo vertically with nav items */
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  margin-right: 100px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header nav ul li {
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
+
+.product-list {
+  padding-top: 100px;
+  margin: 0 20px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.icon {
+  color: black;
+  font-size: 24px;
+  vertical-align: middle;
+}
