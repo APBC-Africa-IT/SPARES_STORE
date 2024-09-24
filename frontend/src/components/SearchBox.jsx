@@ -1,15 +1,15 @@
+// SearchBox.js (as provided)
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import './SearchBox.css'; // Ensure you have this CSS file or adjust path accordingly
+import './SearchBox.css';  // Ensure this path is correct
 import '../styles.css';
-
 
 function SearchBox({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSearch(searchTerm);
+        onSearch(searchTerm);  // Pass search term to parent component
     };
 
     return (

@@ -13,17 +13,26 @@ html {
   margin-top: 120px; /* To align with the top padding of the sidebar */
 }
 
-/* Sidebar styling */
 .side-nav {
   width: 300px;
   padding: 10px;
   position: fixed;
-  height: 100vh;
-  overflow: auto;
-  left: 20px;
   top: 120px;
+  bottom: 20px; /* Add this to create space at the bottom */
+  left: 20px;
+  overflow-y: auto; /* Change to overflow-y for vertical scrolling only */
   scroll-behavior: smooth;
-  background-color: #f8f8f8; /* Optional background */
+  background-color: #f8f8f8;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push the icon to the right */
+}
+
+.filter-header svg {
+  margin-left: 0.5rem; /* Reduced margin for closer proximity to text */
 }
 
 /* Main content styling */
@@ -173,4 +182,18 @@ html {
 
 .icon {
   margin: 0px 10px 0px;
+  font-size: 18px;
+}
+
+.custom-slider .rc-slider-track {
+  background-color: #000000; /* Track color */
+}
+
+.custom-slider .rc-slider-handle {
+  border-color: #000000; /* Handle border color */
+  background-color: #000000; /* Handle background color */
+}
+
+.custom-slider .rc-slider-rail {
+  background-color: #000000; /* Rail color */
 }
