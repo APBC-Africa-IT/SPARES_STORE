@@ -12,13 +12,13 @@ body {
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 1000;
   left: 0;
   box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
 }
 
 .logo-container {

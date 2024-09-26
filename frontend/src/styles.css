@@ -3,26 +3,33 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* For the overall container */
 .layout {
   display: flex;
-  padding-left: 320px; /* Side nav width (300px) + left margin (20px) */
-  margin-top: 120px; /* To align with the top padding of the sidebar */
+  flex-direction: row;
+  flex: 1;
+  margin-top: 120px;
+}
+
+.filter-count {
+  display: flex;
+  background-color: #f8f8f8;
+  padding: 20px;
 }
 
 .side-nav {
   width: 300px;
   padding: 10px;
-  position: fixed;
-  top: 120px;
-  bottom: 20px; /* Add this to create space at the bottom */
-  left: 20px;
-  overflow-y: auto; /* Change to overflow-y for vertical scrolling only */
-  scroll-behavior: smooth;
+  position: relative;
   background-color: #f8f8f8;
+  overflow-y: auto; /* Scroll when content overflows */
+  height: calc(100vh - 120px); /* Ensure side-nav fits in viewport */
+  box-sizing: border-box; /* Ensure side-nav fills the height */
 }
 
 .filter-header {
@@ -39,6 +46,7 @@ html {
 .main-content {
   flex: 1;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Products grid */
@@ -180,9 +188,26 @@ html {
   cursor: pointer;
 }
 
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .icon {
   margin: 0px 10px 0px;
-  font-size: 18px;
+  font-size: 28px;
+}
+
+.page-icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active {
+  color: #b8860b;
+  font-weight: bold;
 }
 
 .custom-slider .rc-slider-track {
@@ -196,4 +221,39 @@ html {
 
 .custom-slider .rc-slider-rail {
   background-color: #000000; /* Rail color */
+}
+
+.benefits {
+  background: linear-gradient(to bottom, #f5f5f5, #fffqqs);
+  padding: 30px;
+  display: flex;
+  margin: 50px 0px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.text p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
 }

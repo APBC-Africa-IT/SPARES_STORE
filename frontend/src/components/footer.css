@@ -1,0 +1,175 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  max-width: 250px;
+  padding: 0 20px;
+}
+
+.footer-section h2 {
+  color: #daa520;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.footer-section.cities {
+  display: block;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.footer-section.cities ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section.cities ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.footer-section.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section.links ul li {
+  margin: 8px 0;
+}
+
+.footer-section.links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+  color: #daa520;
+}
+
+.footer-section.social .social-icons a {
+  display: block;
+  color: white;
+  margin: 5px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-section.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container .logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-section.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-section.logo a:hover {
+  color: #daa520;
+}
+
+.footer-section.logo a svg {
+  margin-right: 5px;
+}
+
+.footer-section.social .social-icons a:hover {
+  color: #daa520;
+}
+
+.footer-divider {
+  width: 90%;
+  margin-top: 60px;
+  margin-bottom: 20px; /* Added margin below the divider */
+  border: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
+.footer-bottom {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  margin: 0px 20px;
+  text-align: center; /* Ensure copyright text is centered */
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+  width: 150px;
+}
+
+.newsletter-form button {
+  padding: 5px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 0 5px 5px 0;
+  background-color: #d9d9d9;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-form button:hover {
+  background-color: #000;
+}

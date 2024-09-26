@@ -18,7 +18,7 @@ const Header = ({ cartCount, onSearch }) => {
                     <li><a href="/products">Shop <RxCaretDown className="header-icon" /></a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact Us</a></li>
-                    <li><SearchBox onSearch={onSearch} /></li> {/* Ensure onSearch is passed */}
+                    <li><SearchBox onSearch={onSearch} /></li> {/* Pass the search handler */}
                     <li><a href="/wishlist"><MdFavoriteBorder className="header-icon" /></a></li>
                     <li>
                         <a href="/cart">
@@ -26,10 +26,12 @@ const Header = ({ cartCount, onSearch }) => {
                             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
                         </a>
                     </li>
+                    <li><a href="/user"><FiUser /></a></li>
                 </ul>
             </nav>
         </div>
     );
 };
+
 
 export default Header;
