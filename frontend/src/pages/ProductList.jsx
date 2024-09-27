@@ -168,52 +168,115 @@ const ProductList = () => {
                         <p>Product Categories <PiCaretDown /></p>
                         <ul>
                             <li onClick={() => handleCategoryClick('engineParts')}>
-                                {checkedCategories.engineParts ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Engine Parts
+                                <span className="category-item">
+                                    {checkedCategories.engineParts ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Engine Parts
+                                </span>
                             </li>
                             <li onClick={() => handleCategoryClick('transmissionParts')}>
-                                {checkedCategories.transmissionParts ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Transmission Parts
+                                <span className="category-item">
+                                    {checkedCategories.transmissionParts ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Transmission Parts
+                                </span>
                             </li>
                             <li onClick={() => handleCategoryClick('electricalComponents')}>
-                                {checkedCategories.electricalComponents ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Electrical Components
+                                <span className="category-item">
+                                    {checkedCategories.electricalComponents ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Electrical Components
+                                </span>
                             </li>
                             <li onClick={() => handleCategoryClick('suspensionParts')}>
-                                {checkedCategories.suspensionParts ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Suspension Parts
+                                <span className="category-item">
+                                    {checkedCategories.suspensionParts ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Suspension Parts
+                                </span>
                             </li>
                         </ul>
                     </div>
+
                     <div className="brand">
-                        <p>Filter by brand <PiCaretDown /></p>
+                        <p>Filter by Brand <PiCaretDown /></p>
                         <ul className="category-list">
                             <li onClick={() => handleBrandClick('nissan')}>
-                                {checkedBrands.nissan ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Nissan
+                                <span className="category-item">
+                                    {checkedBrands.nissan ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Nissan
+                                </span>
                             </li>
                             <li onClick={() => handleBrandClick('subaru')}>
-                                {checkedBrands.subaru ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Subaru
+                                <span className="category-item">
+                                    {checkedBrands.subaru ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Subaru
+                                </span>
                             </li>
                             <li onClick={() => handleBrandClick('hyundai')}>
-                                {checkedBrands.hyundai ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Hyundai
+                                <span className="category-item">
+                                    {checkedBrands.hyundai ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Hyundai
+                                </span>
                             </li>
                             <li onClick={() => handleBrandClick('toyota')}>
-                                {checkedBrands.toyota ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Toyota
+                                <span className="category-item">
+                                    {checkedBrands.toyota ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Toyota
+                                </span>
                             </li>
-                            <li onClick={() => handleBrandClick('volvo')}>
-                                {checkedBrands.volvo ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Volvo
+                            <li
+                                onClick={() => handleBrandClick('volvo')}>
+                                <span className="category-item">
+                                    {checkedBrands.volvo ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Volvo
+                                </span>
                             </li>
                             <li onClick={() => handleBrandClick('mercedesBenz')}>
-                                {checkedBrands.mercedesBenz ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Mercedes-Benz
+                                <span className="category-item">
+                                    {checkedBrands.mercedesBenz ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Mercedes-Benz
+                                </span>
                             </li>
                         </ul>
                     </div>
+
                     <div className="price">
                         <div className="price-range">
                             <span>${priceRange[0]}</span> - <span>${priceRange[1]}</span>
@@ -230,23 +293,42 @@ const ProductList = () => {
                     </div>
 
                     <div className="condition">
-                        <p>Filter by condition <PiCaretDown /></p>
+                        <p>Filter by Condition <PiCaretDown /></p>
                         <ul>
                             <li onClick={() => handleConditionClick('new')}>
-                                {checkedConditions.new ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                New
+                                <span className="category-item">
+                                    {checkedConditions.new ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    New
+                                </span>
                             </li>
                             <li onClick={() => handleConditionClick('refurbished')}>
-                                {checkedConditions.refurbished ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Refurbished
+                                <span className="category-item">
+                                    {checkedConditions.refurbished ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Refurbished
+                                </span>
                             </li>
                             <li onClick={() => handleConditionClick('used')}>
-                                {checkedConditions.used ? <IoCheckboxOutline className="icon" /> : <RiCheckboxBlankLine className="icon" />}
-                                Used
+                                <span className="category-item">
+                                    {checkedConditions.used ? (
+                                        <IoCheckboxOutline className="icon" />
+                                    ) : (
+                                        <RiCheckboxBlankLine className="icon" />
+                                    )}
+                                    Used
+                                </span>
                             </li>
                         </ul>
                     </div>
                 </div>
+
 
                 <div className="main-content">
                     <div className="products">

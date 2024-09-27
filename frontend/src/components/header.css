@@ -6,35 +6,33 @@ body {
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: "Arial", sans-serif; /* Add a modern font */
 }
 
 .header {
-  background-color: #ffffff;
-  color: #000000;
+  background: linear-gradient(
+    90deg,
+    #c0c0c0,
+    #d9d9d9
+  ); /* Gradient background */
+  color: #000;
   text-align: center;
-  position: absolute;
+  position: fixed; /* Fixed position to stay at the top */
   width: 100%;
   top: 0;
   z-index: 1000;
   left: 0;
   box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
-}
-
-.logo-container {
-  display: inline-block; /* Keeps the logo in line with the navigation items */
-  margin-right: 20px; /* Space between logo and nav items */
-}
-
-.logo {
-  height: 100px; /* Adjust the height as needed */
-  vertical-align: middle; /* Aligns logo vertically with nav items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 20px 0; /* Add padding for better spacing */
 }
 
 .header nav {
   display: flex;
   justify-content: center;
-  margin-right: 100px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -45,17 +43,23 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header nav ul li {
-  margin: 0 15px;
+  margin: 0 25px; /* Increased margin for more spacing between nav items */
   position: relative; /* Set relative positioning for the li */
 }
 
 .header nav ul li a {
   text-decoration: none;
-  color: #000000;
-  font-size: 15px;
+  color: #000;
+  font-size: 16px;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header nav ul li a:hover {
+  color: #ffcc00; /* Change color on hover */
 }
 
 /* Style for the cart count */
@@ -70,15 +74,26 @@ body {
   font-size: 12px; /* Font size */
 }
 
-.product-list {
-  padding-top: 100px; /* Ensure content does not overlap with header */
-  margin: 0 20px;
-  color: #000000;
-  font-size: 18px;
-}
-
 .header-icon {
-  color: black;
+  color: #000;
   font-size: 20px;
   vertical-align: middle;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-icon:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Center the search input */
+.header nav ul li.search-box-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
 }

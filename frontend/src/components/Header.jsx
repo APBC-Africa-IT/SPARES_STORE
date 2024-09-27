@@ -10,15 +10,16 @@ const Header = ({ cartCount, onSearch }) => {
     return (
         <div className="header">
             <nav>
-                <div className="logo-container">
+                {/* Uncomment to show logo */}
+                {/* <div className="logo-container">
                     <a href="/"><img src={logo} alt="Logo" className="logo" /></a>
-                </div>
+                </div> */}
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Shop <RxCaretDown className="header-icon" /></a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact Us</a></li>
-                    <li><SearchBox onSearch={onSearch} /></li> {/* Pass the search handler */}
+                    <li className="search-box-container"><SearchBox onSearch={onSearch} /></li>
                     <li><a href="/wishlist"><MdFavoriteBorder className="header-icon" /></a></li>
                     <li>
                         <a href="/cart">
@@ -32,6 +33,5 @@ const Header = ({ cartCount, onSearch }) => {
         </div>
     );
 };
-
 
 export default Header;

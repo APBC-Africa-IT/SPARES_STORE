@@ -195,9 +195,69 @@ html {
   margin-top: 20px;
 }
 
+.side-nav {
+  padding: 10px; /* Add padding to the side-nav */
+}
+
+.categories,
+.brand,
+.price,
+.condition {
+  margin: 20px 0; /* Consistent margin between sections */
+}
+
+.categories p,
+.brand p,
+.condition p {
+  font-size: 16px; /* Consistent font size for headings */
+  font-weight: bold; /* Make the headings bold */
+  display: flex; /* Use flex for heading alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.categories ul,
+.brand ul,
+.condition ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.categories li,
+.brand li,
+.condition li {
+  display: flex; /* Use flex for item alignment */
+  align-items: center; /* Center items vertically */
+  margin: 20px 0px; /* Space between items */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.category-item {
+  display: flex; /* Enable flex layout for icon and text */
+  align-items: center; /* Center icon with text vertically */
+  width: 100%; /* Ensure items take full width for alignment */
+  font-size: 15px;
+}
+
 .icon {
-  margin: 0px 10px 0px;
-  font-size: 28px;
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 20px; /* Adjust icon size as needed */
+}
+
+.price-range {
+  font-size: 16px; /* Font size for the price range */
+  margin-bottom: 10px; /* Space below price range */
+}
+
+.price-slider {
+  margin: 10px 0; /* Margin for the slider */
+}
+
+/* Hover effect for list items */
+.categories li:hover,
+.brand li:hover,
+.condition li:hover {
+  background-color: #f0f0f0; /* Change background on hover */
 }
 
 .page-icon {
