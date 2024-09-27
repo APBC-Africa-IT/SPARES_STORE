@@ -5,10 +5,34 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 import { RxCaretDown } from "react-icons/rx";
 import logo from '../assets/logotransparent.png';
+import { useEffect } from 'react';
 
 const Header = ({ cartCount, onSearch }) => {
+
+    useEffect(() => {
+        // Add click event listener to toggle the menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.header nav ul');
+
+        const toggleMenu = () => {
+            navMenu.classList.toggle('show');
+        };
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            menuToggle.removeEventListener('click', toggleMenu);
+        };
+    }, []);
+
     return (
         <div className="header">
+            <div className="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 {/* Uncomment to show logo */}
                 {/* <div className="logo-container">

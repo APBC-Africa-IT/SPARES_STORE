@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../styles.css';
@@ -157,6 +157,24 @@ const ProductList = () => {
             setCurrentPage(currentPage + 1);
         }
     };
+
+    // Toggle side navigation
+    useEffect(() => {
+        const filterToggle = document.querySelector('.filter-toggle');
+        const sideNav = document.querySelector('.side-nav');
+
+        const toggleSideNav = () => {
+            sideNav.classList.toggle('show');
+        };
+
+        filterToggle.addEventListener('click', toggleSideNav);
+
+        // Cleanup listener on unmount
+        return () => {
+            filterToggle.removeEventListener('click', toggleSideNav);
+        };
+    }, []);
+
     return (
         <div>
             {/* Pass handleSearch to Header */}
@@ -164,6 +182,7 @@ const ProductList = () => {
 
             <div className="layout">
                 <div className="side-nav">
+                    <button className="filter-toggle">Toggle Filters</button>
                     <div className="categories">
                         <p>Product Categories <PiCaretDown /></p>
                         <ul>
@@ -328,7 +347,6 @@ const ProductList = () => {
                         </ul>
                     </div>
                 </div>
-
 
                 <div className="main-content">
                     <div className="products">

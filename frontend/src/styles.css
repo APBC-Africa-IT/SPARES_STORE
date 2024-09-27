@@ -22,14 +22,20 @@ html {
   padding: 20px;
 }
 
+/* Default styles for side navigation */
 .side-nav {
-  width: 300px;
-  padding: 10px;
-  position: relative;
-  background-color: #f8f8f8;
-  overflow-y: auto; /* Scroll when content overflows */
-  height: calc(100vh - 120px); /* Ensure side-nav fits in viewport */
-  box-sizing: border-box; /* Ensure side-nav fills the height */
+  display: none;
+}
+
+/* Show side navigation when the 'show' class is added */
+.side-nav.show {
+  display: block;
+}
+
+/* Ensure the filter toggle button is always visible */
+.filter-toggle {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .filter-header {
@@ -52,7 +58,7 @@ html {
 /* Products grid */
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
 }
@@ -117,25 +123,6 @@ html {
   font-size: 12px; /* Font size */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1200px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-  .products {
-    grid-template-columns: 1fr;
-  }
-
-  .product-item {
-    width: 100%; /* Full width on mobile */
-    max-width: 250px; /* But not wider than 250px */
-  }
-}
-
 .side-nav > div {
   padding: 20px;
   margin: 20px;
@@ -196,7 +183,13 @@ html {
 }
 
 .side-nav {
-  padding: 10px; /* Add padding to the side-nav */
+  width: 300px;
+  padding: 10px;
+  position: relative;
+  background-color: #f8f8f8;
+  overflow-y: auto;
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
 }
 
 .categories,
@@ -316,4 +309,138 @@ footer {
   text-align: center;
   width: 100%;
   margin-top: auto;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+  }
+
+  .show-side-nav {
+    display: block;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    max-width: 100%; /* Full width on mobile */
+  }
+
+  .pagination {
+    justify-content: center; /* Center pagination on mobile */
+  }
+
+  .benefits {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefits > div {
+    margin-bottom: 20px;
+  }
+  .header nav {
+    flex-direction: column;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header nav ul li {
+    margin: 10px 0;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .side-nav.show {
+    display: block;
+  }
+
+  .filter-toggle {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    padding: 10px;
+  }
+
+  .add-to-cart {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .product-item p {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .pagination {
+    font-size: 14px;
+  }
+
+  .benefits {
+    font-size: 20px;
+  }
+
+  .side-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .side-nav.show {
+    display: block;
+  }
+
+  .filter-toggle {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
